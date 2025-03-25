@@ -64,7 +64,7 @@ INSERT INTO Shelters VALUES('Hope Paws','Jaipur, Rajasthan')
 INSERT INTO Shelters VALUES('Kind Tails','Lucknow, Uttar Pradesh')
 INSERT INTO Shelters VALUES('NewPaw','Bhopal, Madhya Pradesh')
 
-INSERT INTO Donations (DonorName, DonationType, DonationAmount, DonationItem, DonationDate,ShelterID) VALUES
+INSERT INTO Donations VALUES
 ('Rahul Sharma', 'Cash', 5000.00, NULL, '2024-01-10 10:30:00',501),
 ('Priya Verma', 'Item', NULL, 'Dog Food Pack', '2024-02-15 14:20:00',502),
 ('Amit Khanna', 'Cash', 7500.50, NULL, '2024-03-08 09:45:00',503),
@@ -76,7 +76,7 @@ INSERT INTO Donations (DonorName, DonationType, DonationAmount, DonationItem, Do
 ('Vikram Malhotra', 'Cash', 3000.75, NULL, '2024-09-14 08:20:00',507),
 ('Simran Kaur', 'Item', NULL, 'Cat Food Pack', '2024-10-01 15:40:00',508);
 
-INSERT INTO AdoptionEvents (EventName, EventDate, Location) VALUES
+INSERT INTO AdoptionEvents VALUES
 ('Summer Adoption Drive', '2024-03-05 10:00:00', 'Mumbai'),
 ('Pet Lovers Meet', '2024-04-12 11:30:00', 'Bengaluru'),
 ('Rescue & Adopt Fair', '2024-05-18 09:00:00', 'Chennai'),
@@ -88,7 +88,7 @@ INSERT INTO AdoptionEvents (EventName, EventDate, Location) VALUES
 ('Stray Love Campaign', '2024-11-22 15:00:00', 'Ahmedabad'),
 ('Rescue & Rehome', '2024-12-05 10:45:00', 'Chandigarh');
 
-INSERT INTO Participants (ParticipantName, ParticipantType, EventID) VALUES
+INSERT INTO Participants VALUES
 ('Paw Haven', 'Shelter', 3001),
 ('Ramesh Agarwal', 'Adopter', 3001),
 ('Happy Tails', 'Shelter', 3002),
