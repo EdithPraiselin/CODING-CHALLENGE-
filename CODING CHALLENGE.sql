@@ -173,6 +173,8 @@ CONSTRAINT fk_uid FOREIGN KEY(PetID) REFERENCES Pets(PetID)
 )
 INSERT INTO Users VALUES('U01','Rajesh',005)
 INSERT INTO Users VALUES('U02','Mahesh',006)
+UPDATE Pets SET AvailableForAdoption=0 WHERE PetID = 005
+UPDATE Pets SET AvailableForAdoption=0 WHERE PetID = 006
 
 SELECT p.Name AS PetName, u.UserName FROM Pets p
 JOIN Users u ON p.PetID = u.PetID
@@ -195,5 +197,6 @@ JOIN Shelters s ON p.ParticipantName = s.Name
 --20.Determine the shelter that has the highest number of adopted pets.
 SELECT Top 3 s.ShelterID, s.Name, COUNT(p.PetID) AS COUNT_PETS FROM Pets p
 JOIN Shelters s ON p.ShelterID = s.ShelterID
+WHERE p.AvailableForAdoption = 0
 GROUP BY s.ShelterID, s.Name
-ORDER BY COUNT_PETS DESC
+ORDER BY COUNT_PETS DESC 
