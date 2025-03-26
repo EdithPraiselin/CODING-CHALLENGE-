@@ -184,7 +184,8 @@ SELECT s.ShelterID, s.Name, COUNT(p.PetID) AS available_pets FROM Shelters s
 LEFT JOIN Pets p ON s.ShelterID = p.ShelterID 
 WHERE p.AvailableForAdoption = 1 GROUP BY s.ShelterID, s.Name
 
---18.Retrieve a list of all shelters along with the count of pets currently available for adoption in each shelter.
+--18.Find pairs of pets from the same shelter that have the same breed.
+INSERT INTO Pets VALUES('Sharpy',4,'German Shepherd','Dog',1,NULL,507)
 SELECT p1.Name AS Pet1_Name,p2.Name AS Pet2_Name, p1.Breed, p1.ShelterID FROM Pets p1
 JOIN Pets p2 ON p1.ShelterID = p2.ShelterID  
 WHERE p1.Breed = p2.Breed AND p1.PetID < p2.PetID  
